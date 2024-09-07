@@ -11,10 +11,10 @@ app.secret_key = '41dd6e3f725710687934560a2f90c1cb5dd1c7e40226198f'
 bcrypt = Bcrypt(app)
 
 # Ścieżki do plików
-USER_FILE_PATH = r'C:\Users\patry\Desktop\STRONA STRESSERA\users\users.txt'
-LOG_FILE_PATH = r'C:\Users\patry\Desktop\STRONA STRESSERA\LOGI\attack_logs.txt'
+USER_FILE_PATH = r'/home/plzbody/users/users.txt'
+LOG_FILE_PATH = r'/home/plzbody/LOGI/attack_logs.txt'
 DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1281914736761507860/2ymKkiNnlI_9UxKYWqv9XZNfIXoo_63gzlXWB11KXQrl9WeeMzrlWJ3hMnLbQQgwl6VC'
-FINDERKA_FILE_PATH = r'C:\Users\patry\Desktop\STRONA STRESSERA\sperma\skleja.txt'
+FINDERKA_FILE_PATH = r'/home/plzbody/sperma/skleja.txt'
 
 # Funkcja do wysyłania logów do Discorda
 def send_discord_log(nick, target_ip, method, time, port, status):
