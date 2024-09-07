@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Główna</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .large-header {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Witaj Cwelu</h1>
+        <a href="{{ url_for('finderka') }}">
+            <button>Finderka</button>
+        </a>
+        <a href="{{ url_for('bombiarka') }}">
+            <button>Bombiarka</button>
+        </a>
+        <a href="{{ url_for('logout') }}">
+            <button>Wyloguj</button>
+        </a>
+        <br><br>
+        <div id="methods" style="margin-top: 20px; color: #ffffff;">
+                <li class="large-header">Metody L4</li>
+            <ul>
+                <li>dns</li>
+                <li>udpbypass</li>
+                <li>udpplain</li>
+                <li>udp-raw (HIGH GBPS)</li>
+                <li>gudp</li>
+                <li>udp-vse</li>
+                <li>home</li>
+                <li>L4 TCP</li>
+                <li>ovh</li>
+                <li>tcp-bypass</li>
+                <li>tcp-tfo</li>
+                <li>tcp-mix</li>
+                <li>tcp-syn</li>
+                <li>tcp-ack</li>
+                <li>tcplegit</li>
+                <li class="large-header">Metody L4 GAME</li>
+                <li>discord</li>
+                <li>game-fivem</li>
+                <li>game-fortnite</li>
+                <li>game-ts3</li>
+                <li>game-ts3 i</li>
+                <li class="large-header">Metody L7 HTTP/HTTPS</li>
+                <li>tlskill</li>
+                <li>http-ddos</li>
+                <li>tls</li>
+                <li>dream</li>
+                <li>reset</li>
+                <li>rapidreset</li>
+                <li>browser</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

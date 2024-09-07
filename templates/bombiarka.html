@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bombiarka</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bombiarka</h1>
+        <form method="post">
+            <input type="text" name="target_ip" placeholder="Adres IP" required>
+            <input type="number" name="port" placeholder="Port" required>
+            <input type="number" name="time" placeholder="Czas" required>
+            <input type="text" name="method" placeholder="Metoda" required>
+            <button type="submit" class="button">Wykonaj Atak</button>
+        </form>
+    </div>
+</body>
+</html>

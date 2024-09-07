@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finderka</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Finderka</h1>
+        <form method="post">
+            <input type="text" name="phrase" placeholder="Wpisz frazę" required>
+            <button type="submit" class="button">Szukaj</button>
+        </form>
+        {% if results %}
+        <ul>
+            {% for result in results %}
+            <li>{{ result }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+</body>
+</html>

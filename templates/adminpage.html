@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Finderka</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #6c5ce7;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #6c5ce7;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        button:hover {
+            background-color: #5a4db1;
+        }
+
+        .search-results {
+            margin-top: 20px;
+        }
+
+        .search-results ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .search-results li {
+            background-color: #f9f9f9;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        .search-results .result {
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+        }
+
+        .result.osiagalny {
+            color: #27ae60;
+        }
+
+        .result.nieosiagalny {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Finderka</h1>
+        <form method="post" action="{{ url_for('finderka') }}">
+            <input type="text" name="phrase" placeholder="Wprowadź frazę" required>
+            <button type="submit">Szukaj</button>
+        </form>
+        <div class="search-results">
+            <h2>Wyniki wyszukiwania:</h2>
+            <ul>
+                {% for result in results %}
+                    <li class="result {{ 'osiagalny' if 'Osiągalny' in result else 'nieosiagalny' }}">
+                        {{ result }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
